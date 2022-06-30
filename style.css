@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: white;
+  background: hsla(345, 100%, 18%, 1);
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1330px) {
+  .container {
+    max-width: 1330px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 199px;
+}
+
+header .logo {
+  width: 100.72px;
+  height: 154.07px;
+
+  /* margin-top: 45px;
+  margin-left: 73px; */
+}
+
+#nav .left,
+#nav .right {
+  flex: 0;
+}
+
+#nav .left {
+  display: flex;
+  align-items: end;
+}
+
+#nav .center {
+  flex: 1;
+}
+
+#nav .center,
+#nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#nav ul {
+  list-style: none;
+}
+
+#nav .center ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 85px;
+
+  font-family: 'Merienda';
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26.25px;
+
+  /* margin: 60px 113px; */
+}
+
+#nav .center ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  width: 171px;
+  height: 63px;
+  background: #cc9d2f;
+
+  /* margin-top: 42px;
+  margin-right: 71px;
+  margin-bottom: 94px; */
+  border: none;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-family: 'Merienda';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: hsla(345, 100%, 18%, 1);
+
+  cursor: pointer;
+}
+
+.button--wing {
+  position: relative;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 40px;
+}
+
+.button--wing::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  background-image: url(./assets/icon.png);
+  height: 77px;
+  width: 40px;
+}
+
+.button--outline {
+  background: transparent;
+  border: 3px solid #cc9d2f;
+  color: #cc9d2f;
+  margin-top: 40px;
+  transition: all 0.2s;
+}
+
+.button--outline:hover {
+  background: #cc9d2f;
+  border: none;
+  color: hsla(345, 100%, 18%, 1);
+}
+
+.button--shadow {
+  margin-left: 4px;
+  position: relative;
+}
+
+.button--shadow::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #cc9d2f;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  left: -4px;
+  top: 4px;
+}
+
+/*===========HOME==========================================================*/
+#home {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#home .container {
+  display: flex;
+}
+
+#home .container .column-left {
+  flex: 2;
+  position: relative;
+}
+
+#home .container .column-right {
+  flex: 3;
+}
+
+#home .column-left .content {
+  position: absolute;
+  left: 0;
+  right: -60%;
+}
+
+#home .column-left h1 {
+  /*backdrop-filter: blur(44px);*/
+
+  background: rgba(91, 0, 23, 0.7);
+
+  font-family: 'Merienda';
+  font-weight: 400;
+  font-size: 84px;
+  line-height: 120px;
+  padding: 30px 20px;
+
+  padding: 0px 20px 0 0px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+#home .column-right img {
+  max-width: 100%;
+}
+
+#home p {
+  width: 62%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 28px;
+
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-right: 1rem;
+}
+
+/*===========VENUE==========================================================*/
+#venue {
+  display: flex;
+  width: 100%;
+  margin-top: 246px;
+  margin-bottom: 268px;
+}
+
+#venue .container {
+  display: flex;
+}
+
+#venue .container .column-left {
+  flex: 4;
+  width: 100%;
+}
+
+#venue .container .column-right {
+  flex: 8;
+  gap: 4px;
+}
+
+#venue .column-right h3 {
+  font-family: 'Merienda';
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 85px;
+}
+
+#venue p {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 27.84px;
+
+  margin-bottom: 6rem;
+}
+
+#venue .column-right .photos {
+  position: relative;
+  display: flex;
+  width: 540px;
+  gap: 38px;
+  margin-top: 7px;
+}
+
+#venue .column-right .photos > div {
+  flex: 1;
+}
+
+#venue .column-right .photos img {
+  width: 100%;
+  padding-top: 48.54px;
+  padding-bottom: 48.54px;
+}
+
+#venue .column-right .photos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 50px; */
+  width: 80%;
+  bottom: 0;
+  border-bottom: 3px solid #cc9d2f;
+}
+
+/*===========COMMENTS==========================================================*/
+#comments {
+  display: flex;
+  width: 100%;
+}
+
+#comments .container {
+  display: flex;
+  margin-bottom: 114px;
+}
+
+#comments .container .column-left {
+  flex: 1;
+}
+
+#comments .container .column-right {
+  flex: 2;
+}
+
+#comments .container .column-left .content {
+  width: 561.02px;
+  height: 555.69px;
+  background-color: #CC9D2F;
+  color: #243054;
+
+
+}
+#comments .container .column-left .content {
+  padding: 89.48px 64.98px 133.88px 133.17px;
+}
+
+#comments .container .column-left .content .quote-text {
+  position: relative;
+  width: 362.88px;
+  height: 200px;
+  margin-bottom: 133.88px;
+}
+
+#comments .container .column-left .content p {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 40px;
+}
+
+#comments .container .column-left .content .quote {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+#comments .container .column-left .content .appraiser {
+  display: flex;
+  width: 100%;
+ 
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+#comments .container .column-left .content .appraiser .left {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(0 100 109 / 24%);
+}
+
+#comments .container .column-left .content .appraiser .left .name {
+  font-size: 13.32px;
+  line-height: 19.98px;
+}
+
+#comments .container .column-left .content .appraiser .left .local {
+  font-size: 9.99px;
+  line-height: 13.32px;
+}
+
+#comments .container .column-left .content .appraiser .right {
+  flex: 0;
+  border-bottom: 2px solid #243054;
+}
+
+/*===========DISPLAY-MENU==========================================================*/
+#display-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 871.17px;
+  
+  background-image: url(./assets/menu-saudi.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#display-menu .content {
+  width: 1142px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#display-menu p {
+  font-family: 'Merienda';
+  font-weight: 400;
+  font-size: 70px;
+  line-height:87.5px;
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+/*===========FOOTER==========================================================*/
+footer {
+  background-color: #CC9D2F;
+}
+
+footer .content .logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 54px;
+  padding-bottom: 59.25px;
+}
+
+footer .content .menu-footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+
+  padding-bottom: 79.36px;
+}
+
+footer .content .menu-footer ul li a {
+  display: flex;
+  color: rgba(91, 0, 23, 1);
+  text-decoration: none;
+
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+footer .content .bottom-footer {
+  border-top: 1px solid rgb(36 48 84 / 15%);
+  padding: 20px 0;
+}
+
+footer .content .bottom-footer > div {
+  display: flex;
+  align-items: center;
+}
+
+footer .content .bottom-footer > div > div {
+  flex: 1;
+}
+
+footer .content .bottom-footer .copyright {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14.96px;
+  line-height: 22.44px;
+  color: #243054;
+}
+
+footer .content .bottom-footer .social-medias {
+  display: flex;
+  justify-content: center;
+}
+footer .content .bottom-footer .social-medias ul {
+  display: flex;
+  gap: 22.51px;
+  list-style: none;
+}
+
+footer .content .bottom-footer .right {
+  display: flex;
+  justify-content: end;
+}
